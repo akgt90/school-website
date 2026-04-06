@@ -8,11 +8,18 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Site header with reusable navigation -->
-  <header class="site-header">
+  <!-- Custom cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header" id="site-header">
     <div class="container nav-wrapper">
       <a class="brand" href="index.html">
-        <span class="brand-mark">P</span>
+        <img class="brand-mark" src="saraswati-logo.png" alt="Saraswati — Goddess of Knowledge">
         <span class="brand-text">
           <strong>Prashanti Public School</strong>
           <small>Kohlwin</small>
@@ -28,68 +35,101 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="events.html">Events & Notices</a>
+        <a href="events.html">Events &amp; Notices</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero section -->
+    <!-- ═══ Hero ═══ -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Welcome to Prashanti Public School</p>
-          <h1>Quality education for children of Kohlwin and nearby villages.</h1>
+          <span class="glow-tag">Welcome to Our School</span>
+          <h1>
+            Empowering the<br>
+            <span class="typed-text" id="typed-target"></span><span class="cursor-blink"></span>
+          </h1>
           <p class="hero-text">
-            Established in 2004, our school offers a supportive and disciplined learning environment
-            for students from Nursery to 10th, helping them grow with confidence and strong values.
+            Since 2004, Prashanti Public School has nurtured young minds from Nursery to 10th class
+            in Kohlwin — building confidence, character, and a love for learning in every child.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="about.html">Discover Our School</a>
+            <a class="button button-primary" href="about.html">
+              Discover Our School
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
             <a class="button button-secondary" href="contact.html">Get in Touch</a>
           </div>
         </div>
 
-        <div class="hero-card hero-media">
-          <!-- School image shown on the front of the website -->
-          <img src="school.webp" alt="Prashanti Public School building in Kohlwin">
-          <div class="hero-card-content">
-            <h2>Our Campus</h2>
-            <p>A welcoming school environment dedicated to learning, discipline, and community growth.</p>
+        <div class="hero-visual">
+          <div class="hero-card" id="hero-tilt">
+            <div class="hero-media" style="position:relative">
+              <img src="school.webp" alt="Prashanti Public School building in Kohlwin">
+              <span class="hero-badge">Est. 2004</span>
+            </div>
+            <div class="hero-card-content">
+              <h2>Our Campus</h2>
+              <p>A welcoming environment dedicated to learning, discipline, and community growth.</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="scroll-hint">
+        <div class="mouse"></div>
+        <span>Scroll</span>
+      </div>
     </section>
 
-    <!-- Latest notices section -->
+    <!-- ═══ Marquee ═══ -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Excellence <span class="dot"></span></span>
+        <span>Discipline <span class="dot"></span></span>
+        <span>Community <span class="dot"></span></span>
+        <span>Integrity <span class="dot"></span></span>
+        <span>Creativity <span class="dot"></span></span>
+        <span>Knowledge <span class="dot"></span></span>
+        <span>Excellence <span class="dot"></span></span>
+        <span>Discipline <span class="dot"></span></span>
+        <span>Community <span class="dot"></span></span>
+        <span>Integrity <span class="dot"></span></span>
+        <span>Creativity <span class="dot"></span></span>
+        <span>Knowledge <span class="dot"></span></span>
+      </div>
+    </div>
+
+    <!-- ═══ Latest Notices ═══ -->
     <section class="section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Latest Notices</p>
+        <div class="section-heading reveal">
+          <span class="glow-tag">Latest Notices</span>
           <h2>Important updates for students and parents</h2>
         </div>
 
         <div class="notice-grid">
-          <article class="notice-card">
+          <article class="notice-card reveal reveal-delay-1">
             <span class="notice-date">April 08</span>
             <h3>Parent-Teacher Meeting</h3>
             <p>Parents are invited to meet teachers and discuss student progress and classroom performance.</p>
           </article>
 
-          <article class="notice-card">
+          <article class="notice-card reveal reveal-delay-2">
             <span class="notice-date">April 12</span>
             <h3>School Cleanliness Drive</h3>
             <p>Students will participate in a campus cleanliness activity and awareness program.</p>
           </article>
 
-          <article class="notice-card">
+          <article class="notice-card reveal reveal-delay-3">
             <span class="notice-date">April 15</span>
             <h3>Admissions Open</h3>
             <p>Admissions are open for Nursery to 10th. Visit the school office for details and registration.</p>
           </article>
 
-          <article class="notice-card">
+          <article class="notice-card reveal reveal-delay-4">
             <span class="notice-date">April 20</span>
             <h3>Bus Timing Reminder</h3>
             <p>Students using school buses should be ready at their village stops before the scheduled pickup time.</p>
@@ -98,26 +138,29 @@
       </div>
     </section>
 
-    <!-- Small highlights section -->
-    <section class="section section-alt">
+    <!-- ═══ Stats / Numbers ═══ -->
+    <section class="section stats-section">
       <div class="container stats-grid">
-        <article class="stat-card">
-          <h3>Nursery-10th</h3>
-          <p>Complete schooling support from early learning to secondary level.</p>
+        <article class="stat-card reveal reveal-delay-1">
+          <div class="stat-number" data-target="22">0</div>
+          <div class="stat-label">Years of Service</div>
+          <p>Educating Kohlwin since 2004</p>
         </article>
-        <article class="stat-card">
-          <h3>Values First</h3>
-          <p>Focused on discipline, respect, and meaningful academic growth.</p>
+        <article class="stat-card reveal reveal-delay-2">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Grade Levels</div>
+          <p>Nursery through 10th standard</p>
         </article>
-        <article class="stat-card">
-          <h3>2004</h3>
-          <p>Serving Kohlwin and nearby villages since the school was established.</p>
+        <article class="stat-card reveal reveal-delay-3">
+          <div class="stat-number" data-target="500" data-suffix="+">0</div>
+          <div class="stat-label">Students & Alumni</div>
+          <p>Growing stronger every year</p>
         </article>
       </div>
     </section>
   </main>
 
-  <!-- Reusable footer -->
+  <!-- ═══ Footer ═══ -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -127,7 +170,7 @@
       <div>
         <h4>Quick Links</h4>
         <a href="about.html">About</a>
-        <a href="events.html">Events & Notices</a>
+        <a href="events.html">Events &amp; Notices</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>

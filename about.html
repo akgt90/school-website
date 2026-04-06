@@ -8,11 +8,15 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Site header with reusable navigation -->
-  <header class="site-header">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header" id="site-header">
     <div class="container nav-wrapper">
       <a class="brand" href="index.html">
-        <span class="brand-mark">P</span>
+        <img class="brand-mark" src="saraswati-logo.png" alt="Saraswati — Goddess of Knowledge">
         <span class="brand-text">
           <strong>Prashanti Public School</strong>
           <small>Kohlwin</small>
@@ -28,74 +32,103 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="events.html">Events & Notices</a>
+        <a href="events.html">Events &amp; Notices</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Page intro -->
+    <!-- ═══ Banner ═══ -->
     <section class="page-banner">
       <div class="container">
-        <p class="eyebrow">About Us</p>
-        <h1>Building strong minds, good values, and a bright future.</h1>
-        <p>Prashanti Public School has been serving Kohlwin since 2004, providing quality education to children from nearby villages.</p>
+        <span class="glow-tag reveal">About Us</span>
+        <h1 class="reveal">Building strong minds,<br>good values, and a <span class="typed-text" id="typed-target"></span><span class="cursor-blink"></span></h1>
+        <p class="reveal">Prashanti Public School has been serving Kohlwin since 2004, providing quality education to children from nearby villages.</p>
       </div>
     </section>
 
-    <!-- School story and mission -->
+    <!-- ═══ Mission & Vision ═══ -->
     <section class="section">
       <div class="container content-grid">
-        <article class="content-card">
+        <article class="content-card reveal">
+          <div class="card-icon">🎯</div>
           <h2>Our Mission</h2>
           <p>
             Our mission is to provide quality education in a safe and disciplined environment where
-            every child can learn, grow, and build a strong foundation for the future.
+            every child can learn, grow, and build a strong foundation for the future. We believe
+            every student deserves the opportunity to discover their potential.
           </p>
         </article>
 
-        <article class="content-card">
+        <article class="content-card reveal reveal-delay-2">
+          <div class="card-icon">🔭</div>
           <h2>Our Vision</h2>
           <p>
             We aim to shape responsible students from Nursery to 10th with knowledge, confidence,
-            good character, and respect for their community.
+            good character, and respect for their community. Our vision extends beyond textbooks —
+            we build citizens who uplift their villages.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- Values section -->
-    <section class="section section-alt">
+    <!-- ═══ Core Values ═══ -->
+    <section class="section" style="background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Core Values</p>
+        <div class="section-heading reveal">
+          <span class="glow-tag">Core Values</span>
           <h2>What guides our school community</h2>
         </div>
 
         <div class="value-grid">
-          <article class="value-card">
+          <article class="value-card reveal reveal-delay-1">
+            <div class="value-icon">⭐</div>
             <h3>Excellence</h3>
             <p>We encourage students to do their best in academics, discipline, and daily life.</p>
           </article>
-          <article class="value-card">
+          <article class="value-card reveal reveal-delay-2">
+            <div class="value-icon">🤝</div>
             <h3>Integrity</h3>
             <p>We nurture honesty, accountability, and respect in everything we do.</p>
           </article>
-          <article class="value-card">
+          <article class="value-card reveal reveal-delay-3">
+            <div class="value-icon">💡</div>
             <h3>Creativity</h3>
             <p>We support curiosity, active learning, and confidence in the classroom.</p>
           </article>
-          <article class="value-card">
+          <article class="value-card reveal reveal-delay-4">
+            <div class="value-icon">🏘️</div>
             <h3>Community</h3>
             <p>We believe in partnership with families and service to nearby village communities.</p>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- ═══ Stats ═══ -->
+    <section class="section stats-section">
+      <div class="container stats-grid">
+        <article class="stat-card reveal reveal-delay-1">
+          <div class="stat-number" data-target="22">0</div>
+          <div class="stat-label">Years Teaching</div>
+          <p>Proudly serving since 2004</p>
+        </article>
+        <article class="stat-card reveal reveal-delay-2">
+          <div class="stat-number" data-target="4">0</div>
+          <div class="stat-label">Core Values</div>
+          <p>Guiding every decision</p>
+        </article>
+        <article class="stat-card reveal reveal-delay-3">
+          <div class="stat-number" data-target="1">0</div>
+          <div class="stat-label">Community</div>
+          <p>One big family</p>
+        </article>
+      </div>
+    </section>
   </main>
 
-  <!-- Reusable footer -->
+  <!-- ═══ Footer ═══ -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -105,7 +138,7 @@
       <div>
         <h4>Quick Links</h4>
         <a href="about.html">About</a>
-        <a href="events.html">Events & Notices</a>
+        <a href="events.html">Events &amp; Notices</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>

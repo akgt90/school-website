@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prashanti Public School | Events & Notices</title>
+  <title>Prashanti Public School | Events &amp; Notices</title>
   <meta name="description" content="See upcoming events and notices from Prashanti Public School in Kohlwin.">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Site header with reusable navigation -->
-  <header class="site-header">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <canvas id="particles"></canvas>
+
+  <!-- ═══ Header ═══ -->
+  <header class="site-header" id="site-header">
     <div class="container nav-wrapper">
       <a class="brand" href="index.html">
-        <span class="brand-mark">P</span>
+        <img class="brand-mark" src="saraswati-logo.png" alt="Saraswati — Goddess of Knowledge">
         <span class="brand-text">
           <strong>Prashanti Public School</strong>
           <small>Kohlwin</small>
@@ -28,67 +32,90 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="events.html">Events & Notices</a>
+        <a href="events.html">Events &amp; Notices</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Page intro -->
+    <!-- ═══ Banner ═══ -->
     <section class="page-banner">
       <div class="container">
-        <p class="eyebrow">Events & Notices</p>
-        <h1>Stay updated with school activities and important dates.</h1>
-        <p>Browse our upcoming programs, student activities, and official notices in one place.</p>
+        <span class="glow-tag reveal">Events &amp; Notices</span>
+        <h1 class="reveal">Stay updated with school<br>activities and <span class="typed-text" id="typed-target"></span><span class="cursor-blink"></span></h1>
+        <p class="reveal">Browse our upcoming programs, student activities, and official notices in one place.</p>
       </div>
     </section>
 
-    <!-- Events displayed in card format -->
+    <!-- ═══ Timeline ═══ -->
     <section class="section">
       <div class="container">
-        <div class="event-grid">
-          <article class="event-card">
-            <span class="event-date">April 08, 2026</span>
-            <h2>Parent-Teacher Meeting</h2>
-            <p>Parents can meet teachers to discuss student progress and classroom development.</p>
-          </article>
+        <div class="section-heading reveal">
+          <span class="glow-tag">Upcoming</span>
+          <h2>What's happening at our school</h2>
+        </div>
 
-          <article class="event-card">
-            <span class="event-date">April 12, 2026</span>
-            <h2>School Cleanliness Drive</h2>
-            <p>Students will take part in a cleanliness drive and awareness activity around the campus.</p>
-          </article>
+        <div class="timeline" id="event-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="event-date">April 08, 2026</span>
+              <h2>Parent-Teacher Meeting</h2>
+              <p>Parents can meet teachers to discuss student progress and classroom development. An important opportunity to align on goals for each child's growth.</p>
+            </div>
+          </div>
 
-          <article class="event-card">
-            <span class="event-date">April 18, 2026</span>
-            <h2>Inter-House Debate Competition</h2>
-            <p>Students from senior classes will participate in a healthy speaking and discussion competition.</p>
-          </article>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="event-date">April 12, 2026</span>
+              <h2>School Cleanliness Drive</h2>
+              <p>Students will take part in a cleanliness drive and awareness activity around the campus. A day of teamwork and environmental consciousness.</p>
+            </div>
+          </div>
 
-          <article class="event-card">
-            <span class="event-date">April 22, 2026</span>
-            <h2>Earth Day Activity</h2>
-            <p>Students will participate in planting activities and poster-making focused on the environment.</p>
-          </article>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="event-date">April 18, 2026</span>
+              <h2>Inter-House Debate Competition</h2>
+              <p>Students from senior classes will participate in a healthy speaking and discussion competition. Fostering critical thinking and public speaking skills.</p>
+            </div>
+          </div>
 
-          <article class="event-card">
-            <span class="event-date">April 25, 2026</span>
-            <h2>Annual Sports Practice Begins</h2>
-            <p>Outdoor games and physical activity practice sessions will begin for interested students.</p>
-          </article>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="event-date">April 22, 2026</span>
+              <h2>Earth Day Activity</h2>
+              <p>Students will participate in planting activities and poster-making focused on the environment. Connecting with nature and learning sustainability.</p>
+            </div>
+          </div>
 
-          <article class="event-card">
-            <span class="event-date">May 02, 2026</span>
-            <h2>New Session Orientation</h2>
-            <p>New students and parents can learn about school rules, timings, and daily routines.</p>
-          </article>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="event-date">April 25, 2026</span>
+              <h2>Annual Sports Practice Begins</h2>
+              <p>Outdoor games and physical activity practice sessions will begin for interested students. Building fitness, teamwork, and sportsmanship.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="event-date">May 02, 2026</span>
+              <h2>New Session Orientation</h2>
+              <p>New students and parents can learn about school rules, timings, and daily routines. A warm welcome to the Prashanti family.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Reusable footer -->
+  <!-- ═══ Footer ═══ -->
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
@@ -98,7 +125,7 @@
       <div>
         <h4>Quick Links</h4>
         <a href="about.html">About</a>
-        <a href="events.html">Events & Notices</a>
+        <a href="events.html">Events &amp; Notices</a>
         <a href="contact.html">Contact</a>
       </div>
       <div>
